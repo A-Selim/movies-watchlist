@@ -33,7 +33,7 @@ searchBtn.addEventListener("click", getMovies);
 // Get movies data
 async function getMovies() {
     const searchValue = searchEl.value;
-    const res = await fetch(`http://www.omdbapi.com/?apikey=fc844ecf&s=${searchValue}`).catch(handleError);
+    const res = await fetch(`https://www.omdbapi.com/?apikey=fc844ecf&s=${searchValue}`).catch(handleError);
     const data = await res.json();
     // When call API is fulfilled but there is no data to display (Movie isn't found || Too many results)
     if (data.Response === "False") {
@@ -45,7 +45,7 @@ async function getMovies() {
     // Get an array of objects for each movie with its details after resolve all promises for each movie id
     moviesArr = await Promise.all(
         ids.map(async (id) => {
-            const res = await fetch(`http://www.omdbapi.com/?apikey=fc844ecf&i=${id}`).catch(handleError);
+            const res = await fetch(`https://www.omdbapi.com/?apikey=fc844ecf&i=${id}`).catch(handleError);
             const data = await res.json();
             return new Movie(
                 data.Poster,
