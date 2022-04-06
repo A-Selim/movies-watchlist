@@ -2,7 +2,7 @@
 
 ## About
 
-Search for your favourite movies and save it in a watchlist.
+Search for your favourite movies and save it in a watchlist.  
 Thanks for [OMDb](http://www.omdbapi.com/) API.
 
 ## Instructions
